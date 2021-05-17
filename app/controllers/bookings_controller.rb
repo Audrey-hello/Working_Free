@@ -2,9 +2,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.list = @booking
-    redirect_to booking_path(@booking)
-    unless @booking.after_save :redirect_to user_path(@booking.office)
+    @office = Office.find(params[:office_id])
+    @booking.office = @office
+    @booking.user = current_user
+    @booking.save
   end
 
   def new
@@ -16,14 +17,15 @@ class BookingsController < ApplicationController
   end
 
   def update
-
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to booking_path(@booking)
   end
 
   private
 
-  def bookmark_params
-    params.require(:booking.permit(:start_date, :end_date)
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
-
 
