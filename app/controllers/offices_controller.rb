@@ -1,5 +1,6 @@
 class OfficesController < ApplicationController
-before_action :set_office, only: [:show, :edit, :update, :destroy]
+
+  before_action :set_office, only: [:show, :edit, :update, :destroy]
   def index
         if params[:query].present?
       @query = params[:query]
@@ -12,15 +13,21 @@ before_action :set_office, only: [:show, :edit, :update, :destroy]
   end
 
   def new
-
+    @office = Office.new
   end
 
   def create
-
+     @office = Office.new(office_params)
+    if @office.save
+      redirect_to office_path(@office)
+    else
+      render :new
+    end
   end
 
   def show
-
+   @bookings = Booking.new
+   @office = Office.new(office: @office)
   end
 
   private
@@ -32,6 +39,4 @@ before_action :set_office, only: [:show, :edit, :update, :destroy]
   def office_params
     params.require(:office).permit(:name, :address, :description, :price, :capacity, :picture_url)
   end
-end
-
 end

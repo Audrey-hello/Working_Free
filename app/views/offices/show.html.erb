@@ -1,0 +1,18 @@
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <tbody>
+      <h1 scope="row">Address</h1>
+         <h2><%= @office.address %></h2>
+      <h1 scope="row">Description</h1>
+        <h2><%= @office.description %></h2>
+      <h1 scope="row">Capacity</h1>
+        <h2><%= @office.capacity %></h2>
+      <h1 scope="row">Price</h1>
+        <h2><%= @office.price %></h2>
+     </tbody>
+ <div class="list-group">
+ <% @office.bookings.each do |bookingb| %>
+      <% booking = Booking.find_by(office: @office, user: user) %>
+<% end %>
+
