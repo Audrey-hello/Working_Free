@@ -1,6 +1,6 @@
 class OfficesController < ApplicationController
-
   before_action :set_office, only: [:show, :edit, :update, :destroy]
+
   def index
     if params[:query].present?
       @query = params[:query]
@@ -14,10 +14,13 @@ class OfficesController < ApplicationController
 
   def new
     @office = Office.new
+    authorize @office
   end
 
   def create
-     @office = Office.new(office_params)
+    @office = Office.new(office_params)
+    authorize @office
+    @office.user = current_user
     if @office.save
       redirect_to office_path(@office)
     else
@@ -26,8 +29,9 @@ class OfficesController < ApplicationController
   end
 
   def show
-   @bookings = Booking.new
-   @office = Office.new(office: @office)
+    @bookings = Booking.new
+    @office = Office.new(office: @office)
+    authorize @office
   end
 
   private
