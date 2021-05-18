@@ -1,9 +1,25 @@
+
+
     <div class="d-flex justify-content-between">
       <div class= "col-6 d-flex justify-content-center">
-        <p> toto </p>
-      </div>
-     <div id="map"class= "col-6">
-      <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="
-    width: 100%">
-      </div>
+      <% @offices.each do |office| %>
+
+          <div class="card-office">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+            <div class="card-office-infos">
+              <div>
+                <h2><%= office.title %></h2>
+                <p><%= office.address %></p>
+                <p><%= office.description %></p>
+                <p><%= office.capacity%></p>
+              </div>
+              <h2 class="card-office-pricing"> <%= office.price %> €</h2>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+    <div id="map"class= "col-6">
+    <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="width: 100%">
+    </div>
     </div>
