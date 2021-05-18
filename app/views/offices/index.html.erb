@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="col">
-      <% if @query %>
+      <% if @search__home %>
         <p>You searched for <strong><%= @query %></strong>. We found <%= @offices.count %> offices out of our <%= Office.count %> on our website.</p>
       <% else %>
         <p>All <%= Office.count %> offices.</p>
@@ -27,10 +27,10 @@
             <p><%= office.address %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons mr-2">people</i><span><%= office.number_of_guests %></span>
+                <i class="material-icons mr-2">people</i><span><%= office.capacity %></span>
               </div>
               <div class="flex ml-3">
-                <i class="material-icons mr-2">euro_symbol</i> <%= office.price_per_night %>
+                <i class="material-icons mr-2">euro_symbol</i> <%= office.price %>
               </div>
             </div>
           </div>
@@ -48,3 +48,10 @@
     <% end %>
   </div>
 </div>
+
+
+    <%# </div>
+      <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
+    </div> %>
+
+
