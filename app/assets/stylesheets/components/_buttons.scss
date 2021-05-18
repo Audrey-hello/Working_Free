@@ -1,0 +1,43 @@
+.btn-flat {
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  background-color: goldenrod;
+    &:hover {
+    color: lightsteelblue;
+  }
+}
+
+.btn-primary {
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: goldenrod;
+    &:hover {
+    color: lightsteelblue;
+  }
+
+}
+
+
+.btn-cancel {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #6a757e;
+  transition: background 0.3s ease;
+}
+
+.form-actions {
+  background-color: goldenrod;
+    &:hover {
+    color: lightsteelblue;
+  }
+}
+
+.btn {
+  background-color: goldenrod;
+    &:hover {
+    color: lightsteelblue;
+  }
+}
+

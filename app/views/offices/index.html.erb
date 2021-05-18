@@ -27,16 +27,15 @@
             <p><%= office.adress %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons mr-2">capacity</i><span><%= office.capacity %></span>
+                <i class="material-icons mr-2">people</i><span><%= office.capacity %></span>
               </div>
               <div class="flex ml-3">
-                <i class="material-icons mr-2">€</i> <%= office.price %>
+                <i class="material-icons mr-2">euro_symbol</i> <%= office.price %>
               </div>
             </div>
           </div>
           <div class="office-card-actions">
-
-            <%= link_to 'More info', office_path(:id) %>
+            <%= link_to 'More info', office_path(office) %>
           </div>
         </div>
       </div>
@@ -48,5 +47,3 @@
       <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
     </div>
 
-
-office GET    /offices/:id(.:format)                                                                   offices#show
