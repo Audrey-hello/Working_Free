@@ -1,9 +1,9 @@
 
 
-    <div class="d-flex justify-content-between">
-      <div class= "col-6 d-flex justify-content-center">
-      <% @offices.each do |office| %>
-
+  <div class="d-flex justify-content-between">
+    <div class= "col-6 d-flex justify-content-center">
+      <div class="row">
+        <% @offices.each do |office| %>
           <div class="card-office">
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
             <div class="card-office-infos">
@@ -17,9 +17,10 @@
             </div>
           </div>
         <% end %>
-        </div>
+      </div>
+    </div>
 
     <div id="map"class= "col-6">
-    <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="width: 100%">
+      <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="width: 100%">
     </div>
-    </div>
+  </div>
