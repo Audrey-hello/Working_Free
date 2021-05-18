@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.list = @booking
     redirect_to booking_path(@booking)
-    unless @booking.after_save :redirect_to user_path(@booking.office)
+    unless @booking.after_save redirect_to user_path(@booking.office)
   end
 
   def new
