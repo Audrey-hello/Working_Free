@@ -26,6 +26,4 @@ class BookingsController < ApplicationController
   def bookmark_params
     params.require(:booking.permit(:start_date, :end_date))
   end
-
 end
-
