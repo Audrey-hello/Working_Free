@@ -8,7 +8,7 @@ class OfficesController < ApplicationController
       # Preventing SQL Injection and Database error for
       # unknown characters
     else
-      @offices = Office.all
+      @offices = policy_scope(Office).order(created_at: :desc)
     end
   end
 
@@ -29,8 +29,8 @@ class OfficesController < ApplicationController
   end
 
   def show
-    @bookings = Booking.new
-    @office = Office.new(office: @office)
+    @booking = Booking.new
+    @user = User.new(office: @office)
     authorize @office
   end
 
