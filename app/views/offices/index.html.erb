@@ -22,26 +22,20 @@
           <div class="office-card-image" style="background-image: url('<%= office.photo %>')"></div>
           <div class="office-card-content">
             <div class="office-card-title">
-              <h4><%= office.name %></h4>
+              <h4><%= office.title %></h4>
             </div>
-            <p><%= office.address %></p>
+            <p><%= office.adress %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons mr-2">people</i><span><%= office.number_of_guests %></span>
+                <i class="material-icons mr-2">people</i><span><%= office.capacity %></span>
               </div>
               <div class="flex ml-3">
-                <i class="material-icons mr-2">euro_symbol</i> <%= office.price_per_night %>
+                <i class="material-icons mr-2">euro_symbol</i> <%= office.price %>
               </div>
             </div>
           </div>
           <div class="office-card-actions">
             <%= link_to 'More info', office_path(office) %>
-            <%= link_to 'Edit', edit_office_path(office), class: 'ml-3 text-warning' %>
-            <%= link_to "Remove", office_path(office),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: 'ml-3 text-danger'
-            %>
           </div>
         </div>
       </div>
