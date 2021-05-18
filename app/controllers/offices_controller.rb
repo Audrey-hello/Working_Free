@@ -2,7 +2,7 @@ class OfficesController < ApplicationController
 
   before_action :set_office, only: [:show, :edit, :update, :destroy]
   def index
-        if params[:query].present?
+    if params[:query].present?
       @query = params[:query]
       @offices = Office.where("name LIKE ?","%#{params[:query]}%")
       # Preventing SQL Injection and Database error for
@@ -37,6 +37,6 @@ class OfficesController < ApplicationController
   end
 
   def office_params
-    params.require(:office).permit(:name, :address, :description, :price, :capacity, :picture_url)
+    params.require(:office).permit(:name, :address, :description, :price, :capacity, photos: [])
   end
 end
