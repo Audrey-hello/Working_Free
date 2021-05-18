@@ -3,6 +3,7 @@ class OfficePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
     def create?
       return true
@@ -11,5 +12,8 @@ class OfficePolicy < ApplicationPolicy
     def new?
       return true
     end
-  end
+
+    def show?
+      return true
+    end
 end
