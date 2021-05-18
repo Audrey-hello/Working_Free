@@ -7,7 +7,7 @@
 
   <div class="row">
     <div class="col">
-      <% if @query %>
+      <% if @search__home %>
         <p>You searched for <strong><%= @query %></strong>. We found <%= @offices.count %> offices out of our <%= Office.count %> on our website.</p>
       <% else %>
         <p>All <%= Office.count %> offices.</p>
@@ -42,3 +42,10 @@
     <% end %>
   </div>
 </div>
+
+    <div>
+      <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
+    </div>
+
+
+office GET    /offices/:id(.:format)                                                                   offices#show
