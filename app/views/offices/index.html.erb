@@ -24,10 +24,10 @@
             <div class="office-card-title">
               <h4><%= office.title %></h4>
             </div>
-            <p><%= office.adress %></p>
+            <p><%= office.address %></p>
             <div class="flex">
               <div class="flex">
-                <i class="material-icons mr-2">people</i><span><%= office.capacity %></span>
+                <i class="material-icons mr-2">capacity</i><span><%= office.capacity %></span>
               </div>
               <div class="flex ml-3">
                 <i class="material-icons mr-2">€</i> <%= office.price %>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="office-card-actions">
-            <%= link_to 'More info', office_path(office) %>
+            <%= link_to 'More info', office_path(:id) %>
           </div>
         </div>
       </div>
@@ -46,3 +46,6 @@
     <div>
       <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
     </div>
+
+
+office GET    /offices/:id(.:format)                                                                   offices#show

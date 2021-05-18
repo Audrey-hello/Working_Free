@@ -29,8 +29,8 @@ class OfficesController < ApplicationController
   end
 
   def show
-    @bookings = Booking.new
-    @office = Office.new(office: @office)
+    @booking = Booking.new
+    @user = User.new(office: @office)
     authorize @office
   end
 
