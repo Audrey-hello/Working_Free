@@ -10,9 +10,14 @@
         <h2><%= @office.capacity %></h2>
       <h1 scope="row">Price</h1>
         <h2><%= @office.price %></h2>
-     </tbody>
+      </tbody>
+ <div class="list-group">
+ <% @office.bookings.each do |booking| %>
+      <% booking = Booking.find_by(office: @office, user: user) %>
+<% end %>
 
     </div>
   </div>
 </div>
+
 
