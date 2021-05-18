@@ -1,51 +1,12 @@
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-12">
-      <h1>All the offices in your area</h1>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <% if @search__home %>
-        <p>You searched for <strong><%= @query %></strong>. We found <%= @offices.count %> offices out of our <%= Office.count %> on our website.</p>
-      <% else %>
-        <p>All <%= Office.count %> offices.</p>
-      <% end %>
-    </div>
-  </div>
 
-  <div class="row">
-    <% @offices.each do |office| %>
-      <div class="col-4">
-        <div class="office-card">
-          <div class="office-card-image" style="background-image: url('<%= office.photo %>')"></div>
-          <div class="office-card-content">
-            <div class="office-card-title">
-              <h4><%= office.title %></h4>
-            </div>
-            <p><%= office.address %></p>
-            <div class="flex">
-              <div class="flex">
-                <i class="material-icons mr-2">capacity</i><span><%= office.capacity %></span>
-              </div>
-              <div class="flex ml-3">
-                <i class="material-icons mr-2">€</i> <%= office.price %>
-              </div>
-            </div>
-          </div>
-          <div class="office-card-actions">
-            <%= link_to 'More info', office_path(:id) %>
-          </div>
-        </div>
+    <div class="d-flex justify-content-between">
+      <div class= "col-6 d-flex justify-content-center">
+      <p> toto </p>
       </div>
-    <% end %>
-  </div>
-</div>
-
-    <div>
-      <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
+      <div id="map"class= "col-6">
+      <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="
+    width: 100%">
+      </div>
     </div>
 
-
-office GET    /offices/:id(.:format)                                                                   offices#show
