@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     authorize @office
     @booking.list = @booking
     redirect_to booking_path(@booking)
-    unless @booking.after_save :redirect_to user_path(@booking.office)
+    unless @booking.after_save redirect_to user_path(@booking.office)
   end
 
   def new
@@ -24,8 +24,8 @@ class BookingsController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:booking.permit(:start_date, :end_date)
+    params.require(:booking.permit(:start_date, :end_date))
   end
-end
 
+end
 
