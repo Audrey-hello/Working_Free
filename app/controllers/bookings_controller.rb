@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    authorize @office
     @booking.list = @booking
     redirect_to booking_path(@booking)
     unless @booking.after_save redirect_to user_path(@booking.office)
@@ -9,6 +10,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @office
   end
 
   def edit
