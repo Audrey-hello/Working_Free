@@ -1,13 +1,16 @@
 .cards {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
 
 .card-office {
-color:black;
-height: 330px;
+  color:black;
+  height: 300px;
+  width: 500px;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 
