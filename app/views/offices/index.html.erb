@@ -1,49 +1,50 @@
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-12">
-      <h1>All the offices in your area</h1>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <% if @search__home %>
-        <p>You searched for <strong><%= @query %></strong>. We found <%= @offices.count %> offices out of our <%= Office.count %> on our website.</p>
-      <% else %>
-        <p>All <%= Office.count %> offices.count</p>
-      <% end %>
-    </div>
-  </div>
 
-  <div class="row">
-    <% @offices.each do |office| %>
-      <div class="col-4">
-        <div class="office-card">
-          <div class="office-card-image" style="background-image: url('<%= office.photo %>')"></div>
-          <div class="office-card-content">
-            <div class="office-card-title">
-              <h4><%= office.title %></h4>
-            </div>
-            <p><%= office.adress %></p>
-            <div class="flex">
-              <div class="flex">
-                <i class="material-icons mr-2">people</i><span><%= office.capacity %></span>
+  <div class= "col-6 d-flex justify-content-center">
+  <h2> Paris : Offices </h2>
+  <p> </p>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class= "col-6 d-flex justify-content-center">
+      <div class="row">
+        <% @offices.each do |office| %>
+          <div class="card-office">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://res.cloudinary.com/mathieuchap/image/upload/v1621379297/coworking_z6skf9.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="flex ml-3">
-                <i class="material-icons mr-2">euro_symbol</i> <%= office.price %>
+              <div class="carousel-item">
+                <img src="https://res.cloudinary.com/mathieuchap/image/upload/v1621379297/austin-distel-rxpthowuvge-unsplash-scaled_qoaolg.jpg"" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://res.cloudinary.com/mathieuchap/image/upload/v1621379296/cbre-start-up-russail-vf_r3hwij.png" class="d-block w-100" alt="...">
               </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="office-card-actions">
-            <%= link_to 'More info', office_path(office) %>
+            <div class="card-office-infos">
+              <div>
+                <h2><%= office.title %></h2>
+                <p><%= office.address %></p>
+                <p><%= office.description %></p>
+                <p><%= office.capacity%></p>
+              </div>
+              <h2 class="card-office-pricing"> <%= office.price %> €</h2>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-</div>
-
-    <div>
-      <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
     </div>
 
+    <div id="map"class= "col-6">
+      <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="width: 100%">
+    </div>
+  </div>
