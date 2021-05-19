@@ -12,13 +12,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "pages#home", class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Rent your spaces", "offices#new", class: "nav-link" %>
+          <%= link_to "Rent your spaces", new_office_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Take a look", "offices#index", class: "nav-link" %>
+          <%= link_to "Take a look", offices_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user && current_user.photo.attached?%>

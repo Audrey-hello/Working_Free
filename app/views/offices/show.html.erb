@@ -1,15 +1,17 @@
- <div class="container">
-  <div class="row">
+ <div class="container my-5">
+  <%# <div class="row"> %>
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <tbody>
-      <h1 scope="row">Address</h1>
-         <h2><%= @office.address %></h2>
-      <h1 scope="row">Description</h1>
-        <h2><%= @office.description %></h2>
-      <h1 scope="row">Capacity</h1>
-        <h2><%= @office.capacity %></h2>
-      <h1 scope="row">Price</h1>
-        <h2><%= @office.price %></h2>
+      <ul class="text-justify mt-5">
+        <li><h2 scope="row mt-5">Address :</h2>
+            <h2><%= @office.address %></h2></li>
+        <li><h2 scope="row">Description :</h2></li>
+            <h2><%= @office.description %><h2>
+         <li><h2 scope="row">Capacity</h2>
+            <h2><%= @office.capacity %></h2></li>
+        <li><h2 scope="row">Price :</h2>
+           <h2><%= @office.price %></h2></li>
+      </div>
       </tbody>
  <div class="list-group">
  <% @office.bookings.each do |booking| %>
