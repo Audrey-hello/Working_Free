@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to office_path(@office)
+      redirect_to root_path
     else
       render :new
     end
