@@ -14,6 +14,7 @@
       </div>
       </tbody>
 
+
       <div class="list-group">
       <% @office.bookings.each do |booking| %>
             <%= booking.start_date %>
@@ -22,6 +23,7 @@
           <%= f.button :submit, "Book" %>
       <% end %>
     </div>
+
   </div>
 </div>
 

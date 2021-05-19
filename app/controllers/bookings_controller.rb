@@ -2,14 +2,20 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @office
+    @office = Office.find(params[:office_id])
     @booking.office = @office
-    redirect_to #SHOW DE OFFICE
+    @booking.user = current_user
+    authorize @booking
+    if @booking.save
+      redirect_to office_path(@office)
+    else
+      render :new
+    end
   end
 
   def new
     @booking = Booking.new
-    authorize @office
+    authorize @booking
   end
 
   private

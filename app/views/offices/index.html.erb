@@ -9,7 +9,7 @@
         <% @offices.each do |office| %>
         <%= link_to office_path(office) do %>
           <div class="card-office">
-            <img src="https://res.cloudinary.com/mathieuchap/image/upload/v1621379297/coworking_z6skf9.jpg" class="d-block w-100" alt="...">
+  
             <div class="card-office-infos">
               <div>
                 <h2><%= office.title %></h2>
@@ -19,6 +19,7 @@
               </div>
               <h2 class="card-office-pricing"> <%= office.price %> €</h2>
             </div>
+
           </div>
            <% end %>
         <% end %>
