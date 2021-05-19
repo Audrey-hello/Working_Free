@@ -1,17 +1,22 @@
 <div class= "col-6 d-flex justify-content-center">
 
-  <h2> Paris : Offices </h2>
-  <p> </p>
+  <h2 class="title my-5"> Paris : Offices </h2>
+
   </div>
   <div class="d-flex justify-content-between">
     <div class= "col-8 d-flex justify-content-center">
       <div class="cards">
         <% @offices.each do |office| %>
         <%= link_to office_path(office) do %>
+
           <div class="card-office">
+
           <% if office.photos.attached? %>
           <%= cl_image_tag office.photos.first.key, height: 300, width: 400, crop: :fill %>
+          <% else %>  
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
           <%end%>
+
             <div class="card-office-infos">
               <div>
                 <h2><%= office.title %></h2>
@@ -32,3 +37,4 @@
       <img  src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png' style="width: 100%">
     </div>
   </div>
+
