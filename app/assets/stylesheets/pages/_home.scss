@@ -4,11 +4,18 @@
   padding: 400px 0;
 }
 
+.banner-title {
+  display: flex;
+  width: 61vw;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 46px;
+  font-size: 56px;
   font-weight: bold;
 }
 
@@ -22,19 +29,16 @@
 .search_home {
   background-color: white;
   opacity: 45%;
-
-}
-
-.banner-title {
   display: flex;
-  width: 61vw;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-direction: column;
+  padding-right: 25px;
 }
 
 .btn-search-home {
   display: flex;
-
+  align-items: flex-end;
+  flex-direction: column;
+  padding-right: 50px;
 }
-
 
