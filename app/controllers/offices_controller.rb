@@ -10,6 +10,14 @@ class OfficesController < ApplicationController
     else
       @offices = policy_scope(Office).order(created_at: :desc)
     end
+
+    @offices = Office.all
+    @markers = @offices.geocoded.map do |office|
+      {
+        lat: office.latitude,
+        lng: office.longitude
+      }
+    end
   end
 
   def new
@@ -30,7 +38,7 @@ class OfficesController < ApplicationController
 
   def show
     @booking = Booking.new
-    @user = User.new(office: @office)
+    @office = Office.find(params[:id])
     authorize @office
   end
 

@@ -2,10 +2,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    authorize @office
-    @booking.list = @booking
-    redirect_to booking_path(@booking)
-    unless @booking.after_save redirect_to user_path(@booking.office)
+    @office
+    @booking.office = @office
+    redirect_to #SHOW DE OFFICE
   end
 
   def new
@@ -13,17 +12,9 @@ class BookingsController < ApplicationController
     authorize @office
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
   private
 
-  def bookmark_params
-    params.require(:booking.permit(:start_date, :end_date))
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
