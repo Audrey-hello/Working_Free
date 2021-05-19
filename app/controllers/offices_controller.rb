@@ -38,7 +38,7 @@ class OfficesController < ApplicationController
 
   def show
     @booking = Booking.new
-    @office = Office.find(params[:id])
+    @office = Office.new(office: @office)
     authorize @office
   end
 

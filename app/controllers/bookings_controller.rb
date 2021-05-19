@@ -2,9 +2,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @office
+    @office = Office.find(params[:office_id])
     @booking.office = @office
-    redirect_to #SHOW DE OFFICE
+    @booking.save
+    redirect_to office_path(@office)
   end
 
   def new
