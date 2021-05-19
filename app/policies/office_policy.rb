@@ -16,4 +16,5 @@ class OfficePolicy < ApplicationPolicy
     def show?
       return true
     end
+
 end
