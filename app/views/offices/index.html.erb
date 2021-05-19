@@ -9,7 +9,9 @@
         <% @offices.each do |office| %>
         <%= link_to office_path(office) do %>
           <div class="card-office">
-  
+          <% if office.photos.attached? %>
+          <%= cl_image_tag office.photos.first.key, height: 300, width: 400, crop: :fill %>
+          <%end%>
             <div class="card-office-infos">
               <div>
                 <h2><%= office.title %></h2>
