@@ -15,15 +15,6 @@
       </tbody>
 
 
-      <div class="list-group">
-      <% @office.bookings.each do |booking| %>
-            <%= booking.start_date %>
-            <%= booking.end_date %>
-            <button type="submit" class="btn-gold mb-5">
-          <%= f.button :submit, "Book" %>
-      <% end %>
-    </div>
-
   </div>
 </div>
 
