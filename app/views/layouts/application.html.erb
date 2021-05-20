@@ -16,8 +16,9 @@
     <%= render 'shared/navbar' %>
     <%= yield %>
 
+
     <% flash.each do |type, msg| %>
-      <div>
+      <div class="alert alert-info color-blue">
         <%= msg %>
       </div>
     <% end %>

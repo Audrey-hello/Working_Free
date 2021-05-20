@@ -31,21 +31,23 @@
   justify-content: center;
   border-radius: 8px;
   padding: 10px;
-  margin-right: 130px;
-  margin-top: 70px;
+  margin-right: 150px;
+  margin-top: 60px;
 
 }
 
 .card-show-office1 {
   overflow: hidden;
-  height: 450px;
-  width: 420px;
+  height: 400px;
+  width: 843px;
   background: whitesmoke;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   padding: 10px;
+  margin-left: 116px;
+
 }
 
 .card-list h6 {
@@ -60,5 +62,16 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 50px;
+}
+
+
+.image {
+  margin-top: 5px;
+  width: 603px;
+  height: 349px;
+  margin-left: 219px;
+  border: mediumblue;
+  border-radius: 10px;
+
 }
