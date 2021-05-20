@@ -58,10 +58,20 @@
   padding: 16px;
 }
 
+.card-dashboard {
+  height: 375px;
+
+    color:black;
+
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 10px;
+
 .flex-box-office-show {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 150px;
   margin-top: 50px;
 }
 

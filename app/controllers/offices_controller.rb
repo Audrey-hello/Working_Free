@@ -32,7 +32,7 @@ class OfficesController < ApplicationController
     authorize @office
     @office.user = current_user
     if @office.save
-      redirect_to office_path(@office)
+      redirect_to dashboard_path
     else
       render :new
     end
