@@ -53,4 +53,3 @@ class OfficesController < ApplicationController
     params.require(:office).permit(:title, :name, :address, :description, :price, :capacity, photos: [])
   end
 end
-
