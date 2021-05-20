@@ -9,6 +9,9 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover{
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  }
 }
 
 .card-dashboard > img {
@@ -36,4 +39,23 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none !important;
+  }
+}
+
+.dashboard-hover:hover{
+    text-decoration: none !important;
+}
+
+.content-dashboard {
+  display: flex;
+}
+.cards-dashboard {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
 }
