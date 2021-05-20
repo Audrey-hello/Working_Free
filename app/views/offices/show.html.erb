@@ -1,10 +1,9 @@
  <div class="container my-5">
   <%# <div class="row"> %>
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <div class="col-6">
       <tbody>
       <ul>
       <div class="card-list">
-        <div class="product-info">
         <li><h6>Address :   <%= @office.address %></h6></li>
         <li><h6>Description : <%= @office.description %></h6></li>
          <li><h6>Capacity :  <%= @office.capacity %></h6></li>
@@ -15,14 +14,13 @@
       </tbody>
 
 
-  </div>
-</div>
+
 
 <div class="container my-5">
 <%= simple_form_for [ @office, @booking ] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.submit "Book this space", class: "btn-gold mb-5" %>
+  <%= f.submit "Book this space", class: "btn mb-5" %>
 <% end %>
 </div>
 </div>
