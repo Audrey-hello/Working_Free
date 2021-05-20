@@ -2,14 +2,7 @@
 @import "home";
 @import "map";
 @import "offices";
-
-// .index-offices-empty {
-//   position: absolute;
-//   display: flex;
-//   align-items: center;
-//   color: rgb(0, 0, 0);
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-// }
+@import "dashboard";
 
 .index-offices-empty-message{
   position: absolute;
@@ -27,3 +20,8 @@
   height: fit-content;
   border-radius: 6px;
 }
+
+
+
+
+

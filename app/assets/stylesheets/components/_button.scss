@@ -14,14 +14,12 @@
   transition: background 0.3s ease;
 }
 
-
-.btn-gold {
-
-  background: goldenrod;
-  color:white;
-  border-radius: 4px;
-   &:hover {
-    background:lightgrey
-  }
+.btn-blue {
+  background: #2645EC;
+  color: white;
+&:hover {
+  background: lightgray;
 }
+}
+
 
