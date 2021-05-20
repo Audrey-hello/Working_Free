@@ -8,11 +8,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "select2/dist/css/select2";
+@import "flatpickr/dist/flatpickr";
 
 // Your CSS partials
 @import "pages/home";
 @import "components/index";
 @import "pages/index";
+@import "flatpickr/dist/themes/airbnb";
 
 
 

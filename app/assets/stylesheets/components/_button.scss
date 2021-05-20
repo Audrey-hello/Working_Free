@@ -14,5 +14,11 @@
   transition: background 0.3s ease;
 }
 
-
+.btn {
+  background: #2645EC;
+  color: white;
+&:hover {
+  background: lightgray;
+}
+}
 
