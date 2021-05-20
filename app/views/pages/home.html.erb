@@ -1,19 +1,28 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dv6ax1ttq/image/upload/e_contrast:0/v1621267552/bg_img_home_emdfsj.jpg);">
 
-  <div class="container">
-    <div class="row justify-content-center mx-auto">
-      <div class="col-12 col-sm-8">
-        <h1>Looking for a place to work? <br>Try Apolo!</h1>
-        <p>Mobile workers, find your workstation of the day</p>
+  <div class="container d-flex justify-content-between">
+    <div class="pr-3">
+      <h1>Looking for a place to work? Try Apolo!</h1>
+      <p class="mt-4">Mobile workers, find your workstation of the day</p>
+    </div>
+
+    <div class="col-12 col-sm-4 search-bar">
+      <div class="card-body">
+        <p class="text-left"><%= "Search on Apolo" %></p>
+        <%= form_tag offices_path, method: :get do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "what place would you like?"
+        %>
+        <%= text_field_tag :capacity,
+            params[:capacity],
+            class: "form-control",
+            placeholder: "how many are you?"
+        %>
+        <%= submit_tag "Book a spot", class: "btn btn-primary" %>
+        <% end %>
       </div>
-      <div class="col-12 col-sm-4 bg-light mx-auto" style="border-radius: 12px;">
-        <div class="glass">
-          <div class="card-body">
-            <h3 class="card-title">A special place to get the work done</h3>
-              <p class="card-text text-dark">Alone or with your team</p>
-                <a href="/offices" class="btn btn-primary">Book your spot</a>
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
 </div>
