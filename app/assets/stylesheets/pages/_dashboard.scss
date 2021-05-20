@@ -1,0 +1,39 @@
+#card-dashboard {
+ position: sticky;
+ width: 100%;
+ height: calc(100vh);
+ top: 0px;
+}
+
+.card-dashboard {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-dashboard > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-dashboard h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-dashboard p {
+  font-size: 1rem;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-dashboard .card-dashboard-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
