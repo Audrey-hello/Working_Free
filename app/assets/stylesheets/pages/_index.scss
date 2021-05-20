@@ -2,3 +2,28 @@
 @import "home";
 @import "map";
 @import "offices";
+
+// .index-offices-empty {
+//   position: absolute;
+//   display: flex;
+//   align-items: center;
+//   color: rgb(0, 0, 0);
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
+
+.index-offices-empty-message{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+}
+
+.go-back{
+  position: relative;
+  display: flex;
+  margin-top: 105px;
+  font-size: 24px;
+  width: 200px;
+  height: fit-content;
+  border-radius: 6px;
+}
