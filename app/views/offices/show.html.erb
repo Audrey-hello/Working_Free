@@ -7,20 +7,14 @@
         <li><h6>Address :   <%= @office.address %></h6></li>
         <li><h6>Description : <%= @office.description %></h6></li>
          <li><h6>Capacity :  <%= @office.capacity %></h6></li>
-        <li><h6> Price :  <%= @office.price %></h6></li>
+        <li><h6>Price :  <%= @office.price %></h6></li>
       </ul>
       </div>
       </div>
       </tbody>
 
 
-      <%# <div class="list-group">
-      <% @office.bookings.each do |booking| %>
-            <%# <%= booking.start_date %>
-            <%# <%= booking.end_date %>
-            <%# <button type="submit" class="btn mb-5">
-          <%= f.button :submit, "Book" %>
-      <%# <% end %>
+
 
 <div class="container my-5">
 <%= simple_form_for [ @office, @booking ] do |f| %>
