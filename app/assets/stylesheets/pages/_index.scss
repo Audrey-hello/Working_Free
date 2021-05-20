@@ -4,3 +4,24 @@
 @import "offices";
 @import "dashboard";
 
+.index-offices-empty-message{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+}
+
+.go-back{
+  position: relative;
+  display: flex;
+  margin-top: 105px;
+  font-size: 24px;
+  width: 200px;
+  height: fit-content;
+  border-radius: 6px;
+}
+
+
+
+
+

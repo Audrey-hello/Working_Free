@@ -3,15 +3,16 @@ class OfficesController < ApplicationController
 
   def index
     if params[:query].present?
-      @query = params[:query]
-      @offices = Office.where("name LIKE ?","%#{params[:query]}%")
-      # Preventing SQL Injection and Database error for
-      # unknown characters
+      @offices = policy_scope(Office).global_search(params[:query])
     else
-      @offices = policy_scope(Office).order(created_at: :desc)
+      @offices = policy_scope(Office)
     end
 
-    @offices = Office.all
+    if params[:capacity].present?
+      capacity_query = "capacity = :capacity"
+      @offices = @offices.where(capacity_query, capacity: params[:capacity].to_i)
+    end
+
     @markers = @offices.geocoded.map do |office|
       {
         lat: office.latitude,
