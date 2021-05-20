@@ -1,0 +1,28 @@
+<div class= "col-12 d-flex justify-content-center">
+  <h2 class="title my-5">  My Dashboard </h2>
+  <div class="row">
+
+      <div class= "col-12 d-flex justify-content-center">
+        <% @offices.each do |office| %>
+              <%= link_to office_path(office) do %>
+              <div class="card-office">
+                <% if office.photos.attached? %>
+                  <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill %>
+                <% else %>
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
+                <%end%>
+              <div class="card-office-infos">
+                <div>
+                  <h2><%= office.title %></h2>
+                  <p><%= office.address %></p>
+                  <p><%= office.description %></p>
+                  <p><%= office.capacity%></p>
+                </div>
+                  <h2 class="card-office-pricing"> <%= office.price %>€</h2>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+  </div>
+</div>
