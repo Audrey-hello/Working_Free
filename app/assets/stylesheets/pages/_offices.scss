@@ -43,3 +43,21 @@ margin-left: 100px;
   margin-left: 417px;
   margin-bottom: 15px;;
 }
+
+.index-offices-empty-message{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  margin-top: 120px;
+}
+
+.go-back{
+  position: relative;
+  display: flex;
+  margin-top: 200px;
+  font-size: 24px;
+  width: 200px;
+  height: fit-content;
+  border-radius: 6px;
+}
