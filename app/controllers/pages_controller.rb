@@ -4,4 +4,11 @@ class PagesController < ApplicationController
   def home
 
   end
+
+  def dashboard
+    @offices = current_user.offices
+    @bookings = current_user.bookings
+    @requests = current_user.requests
+  end
+
 end
