@@ -10,16 +10,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item active navbar-links">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item navbar-links">
           <%= link_to "Rent your spaces", new_office_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item navbar-links">
           <%= link_to "Take a look", offices_path, class: "nav-link" %>
         </li>
+        <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if current_user && current_user.photo.attached?%>
           <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -39,4 +39,5 @@
       <% end %>
     </ul>
   </div>
+
 </div>
