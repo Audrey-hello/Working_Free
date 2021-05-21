@@ -24,6 +24,9 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
+  const mapElement = document.getElementById('map');
+
+  if (mapElement) {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
 
   const map = new mapboxgl.Map({
@@ -36,7 +39,8 @@ const initMapbox = () => {
   addMarkers(map, markers);
   map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl }));
-};
+  };
+  };
 
 
 export { initMapbox };
