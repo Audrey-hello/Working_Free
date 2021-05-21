@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
       redirect_to office_path(@office), notice: "Your booking is confirmed!"
 
     else
-      render :new
+     redirect_to office_path(@office)
     end
   end
 

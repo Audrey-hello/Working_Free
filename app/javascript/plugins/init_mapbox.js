@@ -2,12 +2,14 @@ import "bootstrap";
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-const mapElement = document.getElementById('map');
+
+
+
 
 // Internal imports, e.g:
 const addMarkers = (map, markers) => {
   markers.forEach((marker) => {
-  const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); 
+  const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
   new mapboxgl.Marker()
     .setLngLat([ marker.lng, marker.lat ])
     .setPopup(popup)
@@ -28,7 +30,7 @@ const initMapbox = () => {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11'
   });
-  
+
   const markers = JSON.parse(mapElement.dataset.markers);
   fitMapToMarkers(map, markers);
   addMarkers(map, markers);

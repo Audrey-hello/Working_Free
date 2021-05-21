@@ -4,7 +4,7 @@ class Office < ApplicationRecord
   has_many :bookings
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-  validates :capacity, numericality: { only_integer: true }
+  validates :capacity, presence:true, numericality: { only_integer: true }
   validates :title, :price, :address, :description, presence: true
 
   include PgSearch::Model
