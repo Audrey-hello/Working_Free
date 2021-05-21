@@ -6,11 +6,9 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @offices = Office.where(user: current_user)
-    @bookings = Booking.where(user: current_user)
+    @offices = current_user.offices
+    @bookings = current_user.bookings
+    @requests = current_user.requests
   end
-
-
-
 
 end
