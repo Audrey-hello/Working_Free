@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to office_path(@office), notice: "Your booking is confirmed!"
+      redirect_to dashboard_path, notice: "Your booking is confirmed!"
 
     else
      redirect_to office_path(@office)
