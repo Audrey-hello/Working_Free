@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
       redirect_to office_path(@office), notice: "Your booking is confirmed!"
 
     else
-      render :new
+     redirect_to office_path(@office)
     end
   end
 
@@ -18,6 +18,21 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     authorize @booking
   end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    @booking.status = "declined"
+    @booking.save
+    redirect_to root_path
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.status = "accepted"
+    @booking.save
+    redirect_to root_path
+  end
+
 
   private
 

@@ -1,52 +1,54 @@
 <div class= "col-6 ">
   </div>
-  <div class="">
-    <div class= "col-8 d-flex justify-content-center index-offices-empty">
     <% if @offices.empty? %>
-      <p class="index-offices-empty-message">No result 😢 Sorry, try a new search</p>
-      <%= link_to "try again?", root_path, class: "btn btn-primary go-back" %>
-    <% end %>
+    <div class="index-noresult">
+      <p class="index-offices-empty-message">No result 😢</p>
+        <%= link_to "try again?", root_path, class: "btn btn-primary go-back" %>
     </div>
-  </div>
+    <% else %>
+    <div>
+      <div class="row">
+        <div class= "col-7 d-flex justify-content-center">
+          <div class="d-flex justify-content-between w-100">
+            <div class= "d-flex justify-content-center w-100">
+              <div class="cards w-100">
+                <% @offices.each do |office| %>
+                  <%= link_to office_path(office) do %>
 
-<div>
-  <div class="row">
-    <div class= "col-7 d-flex justify-content-center">
-      <div class="d-flex justify-content-between w-100">
-        <div class= "d-flex justify-content-center w-100">
-          <div class="cards w-100">
-            <% @offices.each do |office| %>
-              <%= link_to office_path(office) do %>
+                    <div class="card-office">
+                      <% if office.photos.attached? %>
+                        <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill %>
+                      <% else %>
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
+                      <%end%>
 
-                <div class="card-office">
-                  <% if office.photos.attached? %>
-                    <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill %>
-                  <% else %>
-                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
-                  <%end%>
-
-                  <div class="card-office-infos">
-                    <div>
-                      <h2><%= office.title %></h2>
-                      <p><%= office.address %></p>
-                      <p><%= office.description %></p>
-                      <p><%= office.capacity%></p>
+                      <div class="card-office-infos">
+                        <div>
+                          <h2><%= office.title %></h2>
+                          <p><%= office.address %></p>
+                          <p><%= office.description %></p>
+                          <p><%= office.capacity%></p>
+                        </div>
+                          <h2 class="card-office-pricing"> <%= office.price %>€</h2>
+                      </div>
                     </div>
-                      <h2 class="card-office-pricing"> <%= office.price %>€</h2>
-                  </div>
-                </div>
-              <% end %>
-            <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container col-5">
+          <div id="map" class=""
+                  style="width: 100%; height: 100vh"
+                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+                  data-markers="<%= @markers.to_json %>">
           </div>
         </div>
       </div>
     </div>
-      <div id="map" class="col-5"
-              style="width: 100%;"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-              data-markers="<%= @markers.to_json %>">
-      </div>
-  </div>
-</div>
+
+<% end %>
+
 
 

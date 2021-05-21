@@ -2,22 +2,21 @@
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
-        <h3 class="text-center mb-5">Create your office</h3>
+        <h3 class="text-center mb-5 mt-3">Create your office</h3>
         <%= simple_form_for @office do |f| %>
           <%= f.input :title %>
           <%= f.input :price %>
           <%= f.input :address %>
           <%= f.input :description %>
           <%= f.input :capacity%>
-
-          <%= f.submit class: 'btn-blue mb-5' %>
-
           <%= f.input :photo, as: :file %>
-          <%= f.submit class: 'btn-blue mb-5' %>
-
-
         <%= link_to 'Back', offices_path %>
-        <%= end %>
+         <% end %>
+          <%= f.submit class: 'btn-blue mb-5' %>
+        <%= link_to 'Back', offices_path %>
+
+        <% end %>
+
       </div>
     </div>
   </div>

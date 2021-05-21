@@ -17,9 +17,33 @@
 .btn-blue {
   background: #2645EC;
   color: white;
+  width: 130px;
+  height: 35px;
+  border-radius: 6px;
 &:hover {
   background: lightgray;
 }
 }
 
+.btn-blue-show {
+  background: #2645EC;
+  color: white;
+  width: 311px;
+  height: 42px;
+  border-radius: 6px;
+&:hover {
+  background: lightgray;
+}
+}
 
+.btn-blue-new-office {
+  background: #2645EC;
+  color: white;
+  width: 506px;
+  height: 44px;
+  border-radius: 6px;
+  margin-top: 25px;
+&:hover {
+  background: lightgray;
+}
+}
