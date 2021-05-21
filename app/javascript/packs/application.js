@@ -26,13 +26,13 @@ require("channels")
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
-
 import { initFlatpickr } from "../plugins/flatpickr";
-import { initMapbox } from '../plugins/init_mapbox';
 
+initFlatpickr();
+
+
+import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
-  initFlatpickr();
 })
-
 

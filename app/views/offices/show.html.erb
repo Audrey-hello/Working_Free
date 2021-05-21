@@ -11,21 +11,35 @@
         <div class="flex-box-office-show">
 
         <ul class="text-style-show">
-           <h5 class="mb-3"> Détails de votre office </h5>
-          <li><h6>Address :   <%= @office.address %></h6></li>
-          <li><h6>Description : <%= @office.description %></h6></li>
-          <li><h6>Capacity :  <%= @office.capacity %></h6></li>
-          <li><h6>Price :  <%= @office.price %>€</h6></li>
+           <h3 class="mb-3"> Your office details </h3>
+
+           <% if @office.address != nil %>
+             <li><h6>Address :   <%= @office.address %></h6></li>
+           <% end %>
+
+            <% if @office.description != nil %>
+              <li><h6>Description : <%= @office.description %></h6></li>
+            <% end %>
+
+            <% if @office.capacity!= nil %>
+               <li><h6>Capacity :  <%= @office.capacity %></h6></li>
+            <% end %>
+
+              <% if @office.price!= nil %>
+                <li><h6>Price :  <%= @office.price %> €</h6></li>
+            <% end %>
         </ul>
 
 
         <div class="card-show-office">
+
           <%= simple_form_for [ @office, @booking ] do |f| %>
-            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_start"} %>
-            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_start" }%>
-            <%= f.submit "Book this space", class: "btn-blue mt-3" %>
+              <h3 style="calendar">Add your dates below </h3>
+            <%= f.input :start_date, :as => "hidden", required: false, input_html: {class: "datepicker", id: "range_start", style: "display: none"} %>
+            <%= f.input :end_date, :as => "hidden", required: false, input_html: {class: "datepicker", id: "range_end" }%>
+            <%= f.submit "Book this space", class: "btn-blue-show mt-3" %>
            <% end %>
-      </div>
+       </div>
     </div>
  </div>
 
