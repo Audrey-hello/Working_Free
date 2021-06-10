@@ -32,7 +32,6 @@
 
 
         <div class="card-show-office">
-
           <%= simple_form_for [ @office, @booking ] do |f| %>
               <h3 style="calendar">Add your dates below </h3>
             <%= f.input :start_date, :as => "hidden", required: false, input_html: {class: "datepicker", id: "range_start", style: "display: none"} %>
