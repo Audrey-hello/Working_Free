@@ -6,7 +6,7 @@
 .card-office {
   color:black;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 5px;
   margin-bottom: 10px;
   margin-left: 30px;
   display: flex;
@@ -59,7 +59,8 @@
 }
 
 .card-list .card-product-infos {
-  padding: 16px;
+  padding: 25px;
+  font-size: 10px;
 }
 
 .card-dashboard {
