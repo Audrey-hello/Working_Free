@@ -4,11 +4,11 @@
       <div class="bg-white rounded p-3 shadow">
         <h3 class="text-center mb-5 mt-3">Create your office</h3>
         <%= simple_form_for @office do |f| %>
-          <%= f.input :title %>
+          <%= f.input :title, value: "What is the title?" %>
           <%= f.input :price %>
           <%= f.input :address %>
           <%= f.input :description %>
-          <%= f.input :capacity%>
+          <%= f.input :capacity %>
           <%= f.input :photo, as: :file %>
 
 

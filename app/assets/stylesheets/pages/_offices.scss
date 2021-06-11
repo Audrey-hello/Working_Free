@@ -36,8 +36,9 @@
 
 .text-style-show {
 margin-top: 50px;
-margin-left: 150px;
 max-width: 400px;
+line-height: 3;
+border-bottom: ridge;
 }
 
 
@@ -46,8 +47,10 @@ font-size: 18px;
 }
 
 .title-office {
-  margin-left: 435px;
-  margin-bottom: 15px;;
+  text-align: center;
+  margin-bottom: 40px;
+  // text-transform: uppercase;
+  -webkit-text-stroke: thin;
 }
 
 .index-offices-empty-message{

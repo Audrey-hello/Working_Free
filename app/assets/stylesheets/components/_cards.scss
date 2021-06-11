@@ -29,14 +29,13 @@
   overflow: hidden;
   height: 470px;
   width: 419px;
-  background: whitesmoke;
+  background: #eff3f7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   padding: 10px;
-  margin-right: 110px;
   margin-top: 43px;
 }
 
@@ -83,12 +82,14 @@
 
 .image {
   margin-top: 5px;
-  width: 603px;
-  height: 349px;
-  margin-left: 250px;
+  width: 100%;
+  height: 512px;
+  /* margin-left: 250px; */
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: mediumblue;
   border-radius: 10px;
-object-fit: cover;
+  object-fit: cover;
+  border: inset;
 }
 
 .index-noresult {
