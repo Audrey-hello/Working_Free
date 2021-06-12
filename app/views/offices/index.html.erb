@@ -19,7 +19,7 @@
                     <div class="card-office">
 
                       <% if office.photos.attached? %>
-                        <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill , class: "image-offices"%>
+                        <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill, class: "image-offices"%>
                       <% else %>
                         <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/ class="image-offices">
                       <%end%>
