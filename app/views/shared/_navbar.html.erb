@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/drojktwel/image/upload/v1621448146/APOLO_2_e7ep5r.jpg"%>
+    <%= image_tag "https://res.cloudinary.com/drojktwel/image/upload/v1621448146/APOLO_2_e7ep5r.jpg" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,8 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Log in", new_user_session_path, class: "btn btn-signup"%>
+          <%# <%= link_to "Login",  class: "nav-link" %>
         </li>
       <% end %>
     </ul>

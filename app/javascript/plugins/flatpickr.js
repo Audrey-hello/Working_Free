@@ -9,9 +9,11 @@ const initFlatpickr = () => {
       inline: true,
       altInputClass: "invisible"
 
-  });
-}
 
+  });
+
+}
+initFlatpickr();
 
 export { initFlatpickr };
 
