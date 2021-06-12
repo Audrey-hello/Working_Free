@@ -1,0 +1,23 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 130px;
+  border-radius: 12px;
+}
+
+.navbar-links{
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 20px;
+}
+
+.form-control {
+  width: 399px;
+}

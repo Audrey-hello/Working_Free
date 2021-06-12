@@ -1,0 +1,41 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://res.cloudinary.com/drojktwel/image/upload/v1621448146/APOLO_2_e7ep5r.jpg" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active navbar-links">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item navbar-links">
+          <%= link_to "Rent your spaces", new_office_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item navbar-links">
+          <%= link_to "Take a look", offices_path, class: "nav-link" %>
+        </li>
+        <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <% if current_user && current_user.photo.attached?%>
+          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dtlkdxg1g/image/upload/v1621349306/user-circle-solid_yx2mgn.svg">
+          <%end%>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Log in", new_user_session_path, class: "btn btn-signup"%>
+          <%# <%= link_to "Login",  class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
