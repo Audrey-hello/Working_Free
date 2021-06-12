@@ -11,4 +11,11 @@ class PagesController < ApplicationController
     @requests = current_user.requests
   end
 
+
+  def destroy
+    @offices = Offices.find(params[:id])
+    @offices.destroy
+    redirect_to offices_path
+  end
+
 end
