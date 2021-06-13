@@ -6,26 +6,31 @@
   width: 95%;
   border-radius: 5px;
   background-color: white;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-.card-office > img {
-  width: 235px;
+.image-offices {
+  width: 260px;
   height: 180px;
 }
 
 .card-office h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
 }
 
-.card-office p {
+.card-office h3 {
   font-size: 1rem;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.card-office p {
+  font-size: 0.9rem;
   opacity: .7;
   margin: 0;
 }
-
 
 .card-office .card-office-infos {
   padding: 16px;
@@ -34,8 +39,6 @@
   align-items: flex-end;
   position: relative; */
 }
-
-
 
 .text-style-show {
 margin-top: 50px;
