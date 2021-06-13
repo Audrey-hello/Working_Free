@@ -1,53 +1,60 @@
 .card-office {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  border-radius: 0 4px 4px 0;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #e3e3e3;
+  width: 95%;
+  border-radius: 5px;
+  background-color: white;
   margin-top: 15px;
-  margin-bottom: 15px;
 }
 
-.card-office > img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
+.image-offices {
+  width: 235px;
+  height: 180px;
 }
 
 .card-office h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
 }
 
-.card-office p {
+.card-office h3 {
   font-size: 1rem;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: right;
+}
+
+.card-office p {
+  font-size: 0.9rem;
   opacity: .7;
   margin: 0;
 }
 
-
 .card-office .card-office-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  width: 350px;
+  height: 150px;
 }
-
 
 .text-style-show {
-margin-top: 50px;
-margin-left: 150px;
-max-width: 400px;
+  margin-top: 50px;
+  max-width: 400px;
+  line-height: 3;
+  border-bottom: ridge;
 }
 
-
 .text-style-show h6 {
-font-size: 18px;
+  font-size: 18px;
 }
 
 .title-office {
-  margin-left: 435px;
-  margin-bottom: 15px;;
+  text-align: center;
+  margin-bottom: 40px;
+  // text-transform: uppercase;
+  -webkit-text-stroke: thin;
 }
 
 .index-offices-empty-message{
@@ -66,5 +73,9 @@ font-size: 18px;
   height: fit-content;
   border-radius: 8px;
   align-items: center;
+}
+
+.trash-celia {
+  height: 20px;
 }
 

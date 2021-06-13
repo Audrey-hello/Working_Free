@@ -29,8 +29,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 import { initFlatpickr } from "../plugins/flatpickr";
 
-initFlatpickr();
 
+initFlatpickr();
 
 import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {

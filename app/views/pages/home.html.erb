@@ -12,15 +12,15 @@
         <%= form_tag offices_path, method: :get do %>
         <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
-            placeholder: "what place would you like?"
+            class: "form-control-home",
+            placeholder: "Let's find a place!"
         %>
-        <%= text_field_tag :capacity,
+        <%# <%= text_field_tag :capacity,
             params[:capacity],
             class: "form-control",
-            placeholder: "how many are you?"
-        %>
-        <%= submit_tag "Book a spot", class: "btn btn-primary" %>
+            placeholder: "how many are you?" %>
+
+        <%= submit_tag "Search a spot", class: "btn-blue-home" %>
         <% end %>
       </div>
     </div>

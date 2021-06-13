@@ -47,3 +47,67 @@
   background: lightgray;
 }
 }
+
+.btn-blue-home {
+  background: #2645EC;
+  color: white;
+  width: 300px;
+  height: 44px;
+  border-radius: 6px;
+  margin-top: 25px;
+&:hover {
+  background: lightgray;
+}
+}
+
+.btn-signup2 {
+  background:#2645EC;
+  color: white;
+  width: 87px;
+  height: 44px;
+  border-radius: 6px;
+  width: 396px;
+  margin-bottom: 56px;
+&:hover {
+  background:lightgrey;
+}
+}
+
+.btn-signup3 {
+  background:lightgrey;
+  color:black;
+  width: 87px;
+  height: 44px;
+  border-radius: 6px;
+  width: 396px;
+  margin-bottom: 56px;
+&:hover {
+  background:#2645EC;
+}
+}
+
+
+.btn-signup4 {
+  background:transparent;
+  border-color: black;
+  color: black;
+  width: 396px;
+  height: 44px;
+  border-radius: 6px;
+  margin-bottom: 56px;
+&:hover {
+   background: #2645EC;
+}
+}
+
+.btn-signup4-home {
+  background: transparent;
+    border-color: black;
+    color: black;
+    width: 87px;
+    height: 38px;
+    border-radius: 6px;
+
+    font-size: 18px;
+    text-align: center;
+}
