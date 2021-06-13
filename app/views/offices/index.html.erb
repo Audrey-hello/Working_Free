@@ -26,10 +26,10 @@
                         <div>
                           <h2><%= office.title %></h2>
                           <p><%= office.address %></p>
-                          <p><%= office.description %></p>
-                          <p><%= office.capacity%></p>
+                          <%# <p><%= office.description %><%# </p> %>
+                          <p>Capacity: <%= office.capacity%></p>
                         </div>
-                          <h2 class="card-office-pricing"> <%= office.price %>€</h2>
+                          <h2 class="card-office-pricing"> <%= office.price %>€ /day</h2>
                       </div>
                     </div>
                   <% end %>
