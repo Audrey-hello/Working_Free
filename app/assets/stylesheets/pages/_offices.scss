@@ -34,20 +34,23 @@
 }
 
 
+
 .text-style-show {
 margin-top: 50px;
-margin-left: 150px;
 max-width: 400px;
+line-height: 3;
+border-bottom: ridge;
 }
-
 
 .text-style-show h6 {
 font-size: 18px;
 }
 
 .title-office {
-  margin-left: 435px;
-  margin-bottom: 15px;;
+  text-align: center;
+  margin-bottom: 40px;
+  // text-transform: uppercase;
+  -webkit-text-stroke: thin;
 }
 
 .index-offices-empty-message{
@@ -68,3 +71,14 @@ font-size: 18px;
   align-items: center;
 }
 
+
+.icon-show {
+  height: 20px;
+}
+
+.image-offices {
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+
+}
