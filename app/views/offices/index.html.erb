@@ -26,14 +26,13 @@
                         <div>
                           <h2><%= office.title %></h2>
                           <p><%= office.address %></p>
-                          <p><%= office.description %> </p>
                           <p>Capacity: <%= office.capacity%></p>
                         </div>
 
-                          <h2 class="card-office-pricing"> <%= office.price %>€</h2>
-                          <%= link_to office_path(office), method: :delete  do %>
-                          <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
-                          <% end %>
+                          <h3 class="card-office-pricing"> <%= office.price %>€ /day</h3>
+<%#                           <%= link_to office_path(office), method: :delete  do %>
+                          <%# <img src="<%= image_path('trash_celia.svg') %><%# " alt="search" class="trash_celia"> %>
+                          <%# <% end %>
 
                       </div>
                     </div>
