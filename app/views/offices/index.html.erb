@@ -17,7 +17,11 @@
 
                     <div class="card-office">
                       <% if office.photos.attached? %>
+<<<<<<< HEAD
                         <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', crop: :fill, class: "image-offices" %>
+=======
+                        <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', crop: :fill, class: "image-offices"%>
+>>>>>>> 0c00dbd11a7f8c744c4cfc4b2e9f66e3605872a7
                       <% else %>
                         <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-offices">
                       <%end%>
@@ -26,11 +30,11 @@
                         <div>
                           <h2><%= office.title %></h2>
                           <p><%= office.address %></p>
-                          <%# <p><%= office.description %><%# </p> %>
+                          <p><%= office.description %> </p>
                           <p>Capacity: <%= office.capacity%></p>
                         </div>
 
-                      
+
 
                           <h2 class="card-office-pricing"> <%= office.price %>€</h2>
                           <%= link_to office_path(office), method: :delete  do %>
