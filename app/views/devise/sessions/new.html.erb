@@ -11,10 +11,10 @@
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.input :photo, as: :file, label: "Upload your photo" %>
   </div>
 
-  <div class="form-actions">
-    <button type="submit" class="btn mb-5">
+  <div class="form-actions mt-5">
     <%= f.button :submit, "Log in", class: "btn btn-signup4" %>
   </div>
 <% end %>

@@ -91,12 +91,23 @@
   background:transparent;
   border-color: black;
   color: black;
-  width: 87px;
+  width: 396px;
   height: 44px;
   border-radius: 6px;
-  width: 396px;
   margin-bottom: 56px;
 &:hover {
    background: #2645EC;
 }
+}
+
+.btn-signup4-home {
+  background: transparent;
+    border-color: black;
+    color: black;
+    width: 87px;
+    height: 38px;
+    border-radius: 6px;
+
+    font-size: 18px;
+    text-align: center;
 }
