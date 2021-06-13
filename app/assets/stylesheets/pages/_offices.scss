@@ -23,7 +23,8 @@
 .card-office h3 {
   font-size: 1rem;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 50px;
+  text-align: right;
 }
 
 .card-office p {
@@ -34,10 +35,8 @@
 
 .card-office .card-office-infos {
   padding: 16px;
-/*   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative; */
+  width: 350px;
+  height: 150px;
 }
 
 .text-style-show {
@@ -78,11 +77,5 @@ font-size: 18px;
 
 .trash-celia {
   height: 20px;
-}
-
- .card-office-pricing {
-  top: 10px;
-  right: 12px;
-  z-index: 4;
 }
 
