@@ -1,7 +1,7 @@
  <div class="container my-5">
   <%# <div class="row"> %>
     <%# <div class="card-show-office1"> %>
-    <h1 class="title-office"><%= @office.title %></h1>
+    <h1 class="title-office">Bienvenue à <%= @office.title %></h1>
   <% if @office.photos.attached? %>
             <%=cl_image_tag @office.photos.first.key, :cloud_name => 'drojktwel', height: 600, width: 400, crop: :fill , class: 'image'%>
           <% else %>
@@ -27,7 +27,7 @@
 
                   <% if @office.price!= nil %>
                   <h6 class="mb-3"> > Price :  <%= @office.price %> €</h6>
-                <% end %>
+
             </div>
             <div >
               <h3 class="mt-4"> Equipments and services </h3>
@@ -42,26 +42,11 @@
                 <a> <img src="/assets/access.svg" class="icon-show"/> Access for people with reduced mobility </a><br>
                 </p>
             </div>
+
+              <% end %>
           </div>
 
 
-
-           <% if @office.address != nil %>
-             <li><h6>Address : <%= @office.address %></h6></li>
-           <% end %>
-
-            <% if @office.description != nil %>
-              <li><h6>Description : <%= @office.description %></h6></li>
-            <% end %>
-
-            <% if @office.capacity!= nil %>
-               <li><h6>Capacity :  <%= @office.capacity %></h6></li>
-            <% end %>
-
-              <% if @office.price!= nil %>
-                <li><h6>Price :  <%= @office.price %> €</h6></li>
-            <% end %>
-        </ul>
 
 
 
