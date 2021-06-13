@@ -8,27 +8,43 @@
             <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image"/>
             <% end %>
         <%# </div> %>
-        <div class="flex-box-office-show">
+         <div class="flex-box-office-show">
+          <div class="container-show">
+            <div class="text-style-show">
+              <h3 class="mb-3" style="-webkit-text-stroke: thin"> Your office details </h3>
 
-        <ul class="text-style-show">
-           <h3 class="mb-3"> Your office details </h3>
+              <% if @office.address != nil %>
+              <h6> > Address :   <%= @office.address %></h6>
+              <% end %>
 
-           <% if @office.address != nil %>
-             <li><h6>Address :   <%= @office.address %></h6></li>
-           <% end %>
+                <% if @office.description != nil %>
+                <h6> > Description : <%= @office.description %></h6>
+                <% end %>
 
-            <% if @office.description != nil %>
-              <li><h6>Description : <%= @office.description %></h6></li>
-            <% end %>
+                <% if @office.capacity!= nil %>
+                <h6> > Capacity :  <%= @office.capacity %></h6>
+                <% end %>
 
-            <% if @office.capacity!= nil %>
-               <li><h6>Capacity :  <%= @office.capacity %></h6></li>
-            <% end %>
+                  <% if @office.price!= nil %>
+                  <h6 class="mb-3"> > Price :  <%= @office.price %> €</h6>
+                <% end %>
+            </div>
+            <div >
+              <h3 class="mt-4"> Equipments and services </h3>
+                <p style="line-height: 2">
+                <img src="/assets/growth.svg" class="icon-show"/><a> Eco-responsible purchasing  </a><br>
+                <a> <img src="/assets/meditation.svg" class="icon-show"/> Yoga area </a><br>
+                <a> <img src="/assets/cutlery.svg" class="icon-show"/> Catering </a><br>
+                <a> <img src="/assets/artist.svg" class="icon-show"/> Artistic studio </a><br>
+                <a> <img src="/assets/biscuit.svg" class="icon-show"/> Snacks </a><br>
+                <a> <img src="/assets/calendar.svg" class="icon-show"/> Open on weekends </a><br>
+                <a> <img src="/assets/staff.svg" class="icon-show"/> Reception staff </a><br>
+                <a> <img src="/assets/access.svg" class="icon-show"/> Access for people with reduced mobility </a><br>
+                </p>
+            </div>
+          </div>
 
-              <% if @office.price!= nil %>
-                <li><h6>Price :  <%= @office.price %> €</h6></li>
-            <% end %>
-        </ul>
+
 
 
         <div class="card-show-office">
