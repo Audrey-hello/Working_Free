@@ -27,7 +27,7 @@
 
                   <% if @office.price!= nil %>
                   <h6 class="mb-3"> > Price :  <%= @office.price %> €</h6>
-                <% end %>
+
             </div>
             <div >
               <h3 class="mt-4"> Equipments and services </h3>
@@ -42,26 +42,13 @@
                 <a> <img src="/assets/access.svg" class="icon-show"/> Access for people with reduced mobility </a><br>
                 </p>
             </div>
+              <%= link_to office_path(@office), method: :delete  do %>
+                    <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
+                    <% end %>
+              <% end %>
           </div>
 
 
-
-           <% if @office.address != nil %>
-             <li><h6>Address : <%= @office.address %></h6></li>
-           <% end %>
-
-            <% if @office.description != nil %>
-              <li><h6>Description : <%= @office.description %></h6></li>
-            <% end %>
-
-            <% if @office.capacity!= nil %>
-               <li><h6>Capacity :  <%= @office.capacity %></h6></li>
-            <% end %>
-
-              <% if @office.price!= nil %>
-                <li><h6>Price :  <%= @office.price %> €</h6></li>
-            <% end %>
-        </ul>
 
 
 
