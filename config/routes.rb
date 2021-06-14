@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :offices, only: [ :index, :show, :create, :new, :destroy ] do
     resources :bookings, only: [ :new, :create, :destroy ]
   end
-  resources :bookings, only: [ :edit, :update ] do
+  resources :bookings, only: [ :edit, :update, :destroy] do
     member do
       get :accept
       get :decline
