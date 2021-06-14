@@ -19,6 +19,9 @@
         <li class="nav-item navbar-links">
           <%= link_to "Take a look", offices_path, class: "nav-link" %>
         </li>
+         <li class="nav-item navbar-links">
+          <%= link_to "Your board", dashboard_path, class: "nav-link" %>
+        </li>
         <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if current_user && current_user.photo.attached? %>

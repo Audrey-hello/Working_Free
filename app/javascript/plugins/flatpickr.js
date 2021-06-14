@@ -12,7 +12,7 @@ const initFlatpickr = () => {
   });
 
 }
-initFlatpickr();
+
 
 
 export { initFlatpickr };

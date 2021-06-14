@@ -14,11 +14,6 @@
   }
 }
 
-.card-dashboard > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
 
 .card-dashboard h2 {
   font-size: 1.4rem;
@@ -73,3 +68,8 @@ margin-left: 30px;
 justify-content: center;
 }
 
+.image-dashboard {
+  width: 465px;
+  height: 202px;
+  object-fit: cover;
+}
