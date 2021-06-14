@@ -9,6 +9,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
   &:hover{
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
   }
@@ -30,7 +31,6 @@
 .card-dashboard .card-dashboard-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   position: relative;
   text-decoration: none;
@@ -65,6 +65,7 @@ margin-right: 40px;
 margin-top: 40px;
 margin-bottom:40px;
 margin-left: 30px;
+font-size: 16px;
 justify-content: center;
 }
 
@@ -72,4 +73,14 @@ justify-content: center;
   width: 465px;
   height: 202px;
   object-fit: cover;
+}
+
+.card-office-pricing {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 318px;
+}
+
+.nav-tabs {
+  background-color: aliceblue;
 }

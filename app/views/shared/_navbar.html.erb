@@ -24,8 +24,8 @@
         </li>
         <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <% if current_user && current_user.photo.attached? %>
-          <%=  image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+          <img src="<%= url_for(current_user.photo) %>" class= "avatar dropdown-toggle" id= "navbarDropdown">
           <% else %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dtlkdxg1g/image/upload/v1621349306/user-circle-solid_yx2mgn.svg">
           <%end%>
