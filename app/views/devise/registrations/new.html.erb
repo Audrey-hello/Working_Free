@@ -18,9 +18,13 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
+   <div class="upload_photo my-3">
+        <%= f.label "Profile photo" %>
+        <%= f.file_field :photo %><br>
+   </div>
 
   <div class="form-actions">
-     <button type="submit" class="btn mb-5">
+     <button type="submit" class="btn btn-signup2 mb-5">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
