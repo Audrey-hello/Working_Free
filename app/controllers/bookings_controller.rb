@@ -33,10 +33,15 @@ class BookingsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @booking = @office.bookings.find(params[:id])
+    @booking.destroy
+    redirect_to office_booking_path
+  end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :destroy)
   end
 end
