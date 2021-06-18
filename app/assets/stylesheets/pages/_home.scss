@@ -7,7 +7,7 @@
 }
 
 .banner h1 {
-  margin: 0;
+  margin-top: 7px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
@@ -62,26 +62,15 @@ mark, .mark {
 }
 
 .text-home {
-  background-color: #ffff;
-  color: black;
-  border-radius:5px;
-  line-height: 1.5;
-  opacity: 0.85;
-  padding-left: 15px;
-  text-align: center;
+  color: white;
+  line-height: 1.1;
+  text-align: left;
 }
 
-.text-left{
+.text-left {
   margin-bottom: 55px;
+}
 
 .form-css {
   font-size: 14px;
-}
-
-.footer {
-  background: transparent;
-  text-align: right;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.35);
-
 }

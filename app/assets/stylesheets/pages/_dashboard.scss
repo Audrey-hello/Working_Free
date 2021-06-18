@@ -15,6 +15,7 @@
   &:hover{
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
   }
+}
 
 
 .card-dashboard3 {
@@ -75,7 +76,7 @@
   }
 }
 
-.dashboard-hover:hover{
+.dashboard-hover:hover {
     text-decoration: none !important;
 }
 
@@ -84,21 +85,21 @@
 }
   
 .cards-dashboard {
-  flex-grow: 1;
+  margin-left: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 16px;
+  grid-gap: 30px;
+  padding: 20px;
 }
 
-.icon-dashboard{
+.icon-dashboard {
   font-size: 40px;
   color: white;
   margin-left: 40px;
   margin-right: 40px;
 }
 
-.h1-dashboard{
+.h1-dashboard {
   margin-top: 40px;
   margin-bottom:40px;
   margin-left: 30px;
@@ -127,8 +128,9 @@
 .card-office-pricing {
   display: flex;
   justify-content: flex-end;
-  padding: 6px;
+  padding: 30px;
   color: black;
+}
 
 .myoffice-prices {
   display: flex;
@@ -154,8 +156,9 @@
 }
 
 .text-infos {
-  margin-left: 8px;
-  margin-top: 8px;
+  margin-left: 15px;
+  margin-top: 15px;
+  height: 110px;
 }
 
 img.trash_celia {
