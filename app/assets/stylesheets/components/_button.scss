@@ -54,7 +54,7 @@
   width: 300px;
   height: 44px;
   border-radius: 6px;
-  margin-top: 25px;
+  margin-top: 40px;
   border-style: unset;
 &:hover {
   background: lightgray;
@@ -68,20 +68,20 @@
   height: 44px;
   border-radius: 6px;
   width: 396px;
-  margin-bottom: 56px;
+  margin-bottom: 30px;
 &:hover {
   background:lightgrey;
 }
 }
 
 .btn-signup3 {
-  background:lightgrey;
+
   color:black;
   width: 87px;
   height: 44px;
   border-radius: 6px;
   width: 396px;
-  margin-bottom: 56px;
+  margin-bottom: 30px;
 &:hover {
   background:#2645EC;
 }
@@ -95,7 +95,7 @@
   width: 396px;
   height: 44px;
   border-radius: 6px;
-  margin-bottom: 56px;
+  margin-bottom: 30px;
 &:hover {
    background: #2645EC;
 }
@@ -111,4 +111,17 @@
 
     font-size: 18px;
     text-align: center;
+}
+
+.btn-signup5 {
+  background:#2645EC;
+  color: white;
+  height: 44px;
+  border-radius: 6px;
+  width: 396px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+&:hover {
+  background:lightgrey;
+}
 }

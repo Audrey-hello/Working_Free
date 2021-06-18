@@ -8,7 +8,6 @@
 
 .banner h1 {
   margin: 0;
-  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
@@ -16,27 +15,25 @@
 
 .banner p {
   font-size: 36px;
-  color: white;
 }
 
 .search-bar {
   border-radius: 12px;
-  background-color: rgba(177, 174, 174, 0.4);
+  background-color: rgba(177, 174, 174, 0.7);
   margin-left: 80px;
 }
 
 .form-control {
   display: flexbox;
-  margin-block: 22px;
-  height: 49px;
+  height: 35px;
   border-radius: 6px;
-  padding: 20px;
+  padding: 8px;
   opacity: 1;
   color: rgba(0, 0, 0, 0.8);
 }
 
 .container-login {
-margin-left: 452px;
+  margin-left: 452px;
 }
 
 .icon-show {
@@ -54,4 +51,37 @@ margin-left: 452px;
   border-radius: 5px;
   height: 40px;
   border-style:none;
+}
+
+mark, .mark {
+  padding: 0.2em;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.text-home {
+  background-color: #ffff;
+  color: black;
+  border-radius:5px;
+  line-height: 1.5;
+  opacity: 0.85;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.text-left{
+  margin-bottom: 55px;
+
+.form-css {
+  font-size: 14px;
+}
+
+.footer {
+  background: transparent;
+  text-align: right;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.35);
+
 }
