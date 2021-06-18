@@ -13,103 +13,103 @@
 </ul>
 <div class="tab-content py-5" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  <div class="content-dashboard">
-    <div class="cards-dashboard">
-      <% @offices.each do |office| %>
-        <div class= "card-dashboard">
-
-          <%= link_to office_path(office) , class:'dashboard-hover' do %>
-            <div class="card-dashboard">
-              <% if office.photos.attached? %>
-                <%= cl_image_tag office.photos.first.key, crop: :fill, class:"image-dashboard" %>
-              <% else %>
-                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-dashboard"/>
-              <%end%>
-                      <div class="card-dashboard-infos">
-                        <div>
-                          <h2><%= office.title %></h2>
-                          <hr>
-                          <p><%= office.address %></p>
-                          <p><%= office.description %></p>
-                          <p><%= office.capacity%> Workstations</p>
-                          <div>
-                            <%= link_to dashboard_path(office), method: :delete  do %>
-                            <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
-                            <% end %>
-                          </div>
-                        </div>
-                        <h2 class="card-office-pricing"> <%= office.price %>€</h2>
-                      </div>
-                      </div>
-                  <% end %>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
-         <div class="content-dashboard">
-    <div class="cards-dashboard">
-      <% @bookings.each do |booking| %>
-        <div class= "card-dashboard">
-
-          <%= link_to office_path(booking.office) , class:'dashboard-hover' do %>
-            <div class="card-dashboard">
-              <% if booking.office.photos.attached? %>
-                <%= cl_image_tag booking.office.photos.first.key, class:"image-dashboard", crop: :fill %>
-              <% else %>
-                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"class="image-dashboard"/>
-              <%end%>
-                  <div class="card-dashboard-infos">
+   <%# <h2 class="text-dash-top"> All your offices are here </h2> %>
+    <div class="content-dashboard">
+      <div class="cards-dashboard">
+        <% @offices.each do |office| %>
+         <div class= "card-dashboard2">
+            <%= link_to office_path(office) , class:'dashboard-hover' do %>
+              <div class="card-dashboard">
+                <% if office.photos.attached? %>
+                  <%= cl_image_tag office.photos.first.key, crop: :fill, class:"image-dashboard" %>
+                <% else %>
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-dashboard"/>
+                <%end%>
+                <div class="card-dashboard-infos">
+                  <div class="text-infos">
+                    <h2><%= office.title %></h2>
+                    <hr>
+                    <p><%= office.address %></p>
+                    <p><%= office.description %></p>
+                    <p><%= office.capacity%> Workstations</p>
                     <div>
-                      <h2><%= booking.office.title %></h2>
-                      <hr>
-                      <p><%= booking.office.address %></p>
-                      <p> Check in: <%= booking.start_date %></p>
-                      <p> Check out: <%= booking.end_date%></p>
-                        <div>
-                          <%= link_to dashboard_path(booking.office),method: :delete  do %>
-                          <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
-                          <% end %>
-                        </div>
+                      <%= link_to dashboard_path(office), method: :delete  do %>
+                        <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
+                      <% end %>
                     </div>
-                      <h2 class="card-office-pricing"> <%= booking.office.price %>€</h2>
                   </div>
+                  <div class="card-office-pricing"> <%= office.price %>€</div>
                 </div>
-          <% end %>
+              </div>
+              <% end %>
             </div>
-          <% end %>
+            <% end %>
         </div>
       </div>
     </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
-         <div class="content-dashboard">
-    <div class="cards-dashboard">
-      <% @requests.each do |request| %>
-      <div class= "card-dashboard">
-        <%= link_to office_path(request.office) , class:'dashboard-hover' do %>
-          <div class="card-dashboard">
-            <% if request.office.photos.attached? %>
-              <%= cl_image_tag request.office.photos.first.key, class:"image-dashboard", crop: :fill %>
-            <% else %>
-              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-dashboard"/>
-            <%end%>
-              <div class="card-dashboard-infos">
-                <div>
-                  <h2><%= request.office.title %></h2>
-                  <hr>
-                  <p><%= request.user.email%></p>
-                  <p> Check in: <%= request.start_date %></p>
-                  <p> Check out: <%= request.end_date%></p>
-                </div>
-                  <h2 class="card-office-pricing"> <%= request.office.price %>€</h2>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <%# <h2 class="text-dash-top"> All your bookings are here </h2> %>
+    <div class="content-dashboard">
+      <div class="cards-dashboard">
+        <% @bookings.each do |booking| %>
+          <div class= "card-dashboard2">
+            <%= link_to office_path(booking.office) , class:'dashboard-hover' do %>
+              <div class="card-dashboard">
+                <% if booking.office.photos.attached? %>
+                  <%= cl_image_tag booking.office.photos.first.key, class:"image-dashboard", crop: :fill %>
+                <% else %>
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"class="image-dashboard"/>
+                <%end%>
+                    <div class="card-dashboard-infos">
+                      <div class="text-infos">
+                        <h2><%= booking.office.title %></h2>
+                        <hr>
+                        <p><%= booking.office.address %></p>
+                        <p> Check in: <%= booking.start_date %></p>
+                        <p> Check out: <%= booking.end_date%></p>
+                          <div>
+                            <%= link_to dashboard_path(booking.office),method: :delete  do %>
+                            <img src="<%= image_path('trash_celia.svg') %>" alt="search" class="trash_celia">
+                            <% end %>
+                          </div>
+                      </div>
+                        <h2 class="card-office-pricing"> <%= booking.office.price %>€</h2>
+                    </div>
+                  </div>
+                <% end %>
               </div>
-            </div>
-          <% end %>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+     <%# <h2 class="text-dash-top"> All your pending requests are here </h2> %>
+      <div class="content-dashboard">
+        <div class="cards-dashboard">
+          <% @requests.each do |request| %>
+          <div class= "card-dashboard2">
+            <%= link_to office_path(request.office) , class:'dashboard-hover' do %>
+              <div class="card-dashboard3">
+                <% if request.office.photos.attached? %>
+                  <%= cl_image_tag request.office.photos.first.key, class:"image-dashboard", crop: :fill %>
+                <% else %>
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-dashboard"/>
+                <%end%>
+                  <div class="card-dashboard-infos">
+                    <div class="text-infos">
+                      <h2 class="text-request"><%= request.office.title %></h2>
+                      <hr>
+                      <p><%= request.user.email%></p>
+                      <p> Check in: <%= request.start_date %></p>
+                      <p> Check out: <%= request.end_date%></p>
+                    </div>
+                      <h2 class="card-office-pricing"> <%= request.office.price %>€</h2>
+                  </div>
+                </div>
+              <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
