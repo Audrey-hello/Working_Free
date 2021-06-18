@@ -1,8 +1,8 @@
 #card-dashboard {
- position: sticky;
- width: 100%;
- height: calc(100vh);
- top: 0px;
+  position: sticky;
+  width: 100%;
+  height: calc(100vh);
+  top: 0px;
 }
 
 .card-dashboard {
@@ -15,7 +15,7 @@
   &:hover{
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
   }
-}
+
 
 .card-dashboard3 {
   overflow: hidden;
@@ -34,9 +34,7 @@
   align-items: center;
   border-radius: 12px;
   margin-bottom: 10px;
-
 }
-
 
 .card-dashboard h2 {
   font-size: 1.1rem;
@@ -44,8 +42,8 @@
   margin: 0;
   margin-bottom: -9px;
   margin-right: 8px;
-
 }
+  
 .card-dashboard3 h2 {
   font-size: 1.1rem;
   font-weight: bold;
@@ -56,15 +54,15 @@
 
 
 .card-dashboard p {
-  font-size: 1rem;
+  font-size: 12px;
   margin: 0;
+  color: black;
 }
 
 .card-dashboard3 p {
   font-size: 1rem;
   margin: 0;
 }
-
 
 .card-dashboard .card-dashboard-infos {
   padding: 16px;
@@ -84,6 +82,7 @@
 .content-dashboard {
   display: flex;
 }
+  
 .cards-dashboard {
   flex-grow: 1;
   display: grid;
@@ -93,47 +92,65 @@
 }
 
 .icon-dashboard{
-font-size: 40px;
-color: white;
-margin-left: 40px;
-margin-right: 40px;
+  font-size: 40px;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .h1-dashboard{
-margin-top: 40px;
-margin-bottom:40px;
-margin-left: 30px;
-font-size: 18px;
-justify-content: center;
+  margin-top: 40px;
+  margin-bottom:40px;
+  margin-left: 30px;
+  font-size: 18px;
+  justify-content: center;
+  font-size: 40px;
+  color: $blue;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.h1-dashboard{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  justify-content: center;
+
 }
 
 .image-dashboard {
-width: 465px;
-height: 191px;
-object-fit: cover;
+  width: 465px;
+  height: 191px;
+  object-fit: cover;
 }
 
 .card-office-pricing {
-display: flex;
-justify-content: flex-end;
-padding: 6px;
-color: black;
+  display: flex;
+  justify-content: flex-end;
+  padding: 6px;
+  color: black;
+
+.myoffice-prices {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 350px;
+  font-size: 14px;
 }
 
 .nav-tabs {
-background-color: #2645EC;
+  background-color: #2645EC;
 }
 
 .nav-link {
-display: block;
-padding: 0.5rem 3rem;
-color: white;
+  display: block;
+  padding: 0.5rem 3rem;
+  color: white;
 }
 
 .text-dash-top {
-margin-inline: 25px;
-margin-bottom: 34px;
-font-size: 20px;
+  margin-inline: 25px;
+  margin-bottom: 34px;
+  font-size: 20px;
 }
 
 .text-infos {
@@ -143,4 +160,9 @@ font-size: 20px;
 
 img.trash_celia {
   margin-top: 20px;
+}
+
+.card-dashboard h3 {
+  font-size: 16px;
+  font-weight: bold;
 }

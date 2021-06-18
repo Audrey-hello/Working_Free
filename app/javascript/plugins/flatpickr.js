@@ -13,8 +13,6 @@ const initFlatpickr = () => {
 
 }
 
-
-
 export { initFlatpickr };
 
 

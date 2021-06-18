@@ -14,16 +14,23 @@
         <%= text_field_tag :query,
             params[:query],
             class: "form-control-home",
-            placeholder: " Let's find a place!"
+            placeholder: "  Let's find a place!"
         %>
         <%# <%= text_field_tag :capacity,
             params[:capacity],
             class: "form-control",
             placeholder: "how many are you?" %>
 
-        <%= submit_tag "Search a spot", class: "btn-blue-home" %>
+        <%= submit_tag "Start", class: "btn-blue-home" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<div>
+  <div class="footer" style= display: flex;flex-grow: 1>
+    Apolo is made with <i class="fas fa-heart"></i> by Audrey & Ji-won
+  </div>
+</div>
+
