@@ -1,27 +1,57 @@
 #card-dashboard {
- position: sticky;
- width: 100%;
- height: calc(100vh);
- top: 0px;
+  position: sticky;
+  width: 100%;
+  height: calc(100vh);
+  top: 0px;
 }
 
 .card-dashboard {
   overflow: hidden;
-  border-radius: 0 4px 4px 0;
-  border-width: 1px 1px 1px 1px;
-  border-style: solid;
-  border-color: #e3e3e3;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 392px;
   border-radius: 5px;
-  background-color: white;
+
+  &:hover{
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  }
+
+
+.card-dashboard3 {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  height: 361px;
+  border-radius: 5px;
+
+  &:hover{
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  }
 }
 
+.card-dashboard2 {
+  width: 392px;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
 
 .card-dashboard h2 {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
-  color: black;
+  margin-bottom: -9px;
+  margin-right: 8px;
 }
+  
+.card-dashboard3 h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: -9px;
+  margin-right: 8px;
+}
+
 
 .card-dashboard p {
   font-size: 12px;
@@ -29,10 +59,17 @@
   color: black;
 }
 
+.card-dashboard3 p {
+  font-size: 1rem;
+  margin: 0;
+}
+
 .card-dashboard .card-dashboard-infos {
-  width: 380px;
-  height: 170px;
   padding: 16px;
+  display: inline;
+  align-items: flex-end;
+  position: relative;
+  text-decoration: none;
   &:hover{
     text-decoration: none !important;
   }
@@ -45,6 +82,7 @@
 .content-dashboard {
   display: flex;
 }
+  
 .cards-dashboard {
   flex-grow: 1;
   display: grid;
@@ -54,6 +92,18 @@
 }
 
 .icon-dashboard{
+  font-size: 40px;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.h1-dashboard{
+  margin-top: 40px;
+  margin-bottom:40px;
+  margin-left: 30px;
+  font-size: 18px;
+  justify-content: center;
   font-size: 40px;
   color: $blue;
   margin-left: 40px;
@@ -65,13 +115,20 @@
   margin-bottom: 20px;
   font-size: 13px;
   justify-content: center;
+
 }
 
 .image-dashboard {
   width: 465px;
-  height: 202px;
+  height: 191px;
   object-fit: cover;
 }
+
+.card-office-pricing {
+  display: flex;
+  justify-content: flex-end;
+  padding: 6px;
+  color: black;
 
 .myoffice-prices {
   display: flex;
@@ -81,7 +138,28 @@
 }
 
 .nav-tabs {
-  background-color: aliceblue;
+  background-color: #2645EC;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 3rem;
+  color: white;
+}
+
+.text-dash-top {
+  margin-inline: 25px;
+  margin-bottom: 34px;
+  font-size: 20px;
+}
+
+.text-infos {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+img.trash_celia {
+  margin-top: 20px;
 }
 
 .card-dashboard h3 {

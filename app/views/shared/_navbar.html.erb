@@ -19,8 +19,10 @@
         <li class="nav-item navbar-links">
           <%= link_to "Take a look", offices_path, class: "nav-link" %>
         </li>
+        <% if user_signed_in? %>
          <li class="nav-item navbar-links">
-          <%= link_to "My account", dashboard_path, class: "nav-link" %>
+          <%= link_to "My bookings", dashboard_path, class: "nav-link" %>
+          <%end%>
         </li>
         <% if user_signed_in? %>
         <li class="nav-item dropdown">

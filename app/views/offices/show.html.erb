@@ -1,7 +1,8 @@
  <div class="container my-5">
   <%# <div class="row"> %>
     <%# <div class="card-show-office1"> %>
-    <h1 class="title-office"><%= @office.title %></h1>
+    <h1 class="title-office">Welcome to <%= @office.title %></h1>
+   
   <% if @office.photos.attached? %>
             <%=cl_image_tag @office.photos.first.key, :cloud_name => 'drojktwel', height: 600, width: 400, crop: :fill , class: 'image'%>
           <% else %>

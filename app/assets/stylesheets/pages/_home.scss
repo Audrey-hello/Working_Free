@@ -7,8 +7,7 @@
 }
 
 .banner h1 {
-  margin: 15px;
-  color: white;
+  margin: 0;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
@@ -16,7 +15,6 @@
 
 .banner p {
   font-size: 36px;
-  color: white;
 }
 
 .search-bar{
@@ -55,6 +53,27 @@
   border-style:none;
 }
 
+mark, .mark {
+  padding: 0.2em;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.text-home {
+  background-color: #ffff;
+  color: black;
+  border-radius:5px;
+  line-height: 1.5;
+  opacity: 0.85;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.text-left{
+  margin-bottom: 55px;
+
 .form-css {
   font-size: 14px;
 }
@@ -64,4 +83,5 @@
   text-align: right;
   padding: 0px 50px;
   color: rgba(0,0,0,0.35);
+
 }
