@@ -29,6 +29,10 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 
+import { loadDynamicText } from '../components/defile';
+document.addEventListener('turbolinks:load', () => {
+  loadDynamicText();
+})
 
 
 import { initMapbox } from '../plugins/init_mapbox';
