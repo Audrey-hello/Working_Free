@@ -9,9 +9,9 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 392px;
-  border-radius: 5px;
-
+  height: 336px;
+  border-radius: 15px;
+  margin-top: 15px;
   &:hover{
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
   }
@@ -99,25 +99,20 @@
   margin-right: 40px;
 }
 
+.icon-dashboard {
+font-size: 40px;
+color: white;
+margin-left: 40px;
+margin-right: 40px;
+}
+
 .h1-dashboard {
-  margin-top: 40px;
-  margin-bottom:40px;
-  margin-left: 30px;
-  font-size: 18px;
-  justify-content: center;
-  font-size: 40px;
-  color: $blue;
-  margin-left: 40px;
-  margin-right: 40px;
-}
+margin-top: 34px;
+margin-bottom: 27px;
+font-size: 18px;
+justify-content: center;
 
-.h1-dashboard{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 13px;
-  justify-content: center;
 
-}
 
 .image-dashboard {
   width: 465px;
@@ -147,7 +142,8 @@
 }
 
 .nav-tabs {
-  background-color: #2645EC;
+background-color: #2645EC;
+height: 100px;
 }
 
 .nav-link {
@@ -172,7 +168,9 @@ img.trash_celia {
   margin-top: 20px;
 }
 
-.card-dashboard h3 {
-  font-size: 16px;
-  font-weight: bold;
+.trash-price {
+  justify-content: space-between;
 }
+
+
+  

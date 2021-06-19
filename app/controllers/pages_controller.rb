@@ -11,9 +11,10 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @offices = Offices.find(params[:id])
-    @offices.destroy
-    redirect_to offices_path
+  @office = Office.find(params[:id])
+  @offices = Offices.find(params[:id])
+  @offices.destroy
+  redirect_to dashboard_path
   end
 
 end
