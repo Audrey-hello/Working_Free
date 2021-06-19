@@ -13,6 +13,18 @@ user_1 = User.create(email: 'user_1@gmail.com', password: '123456')
 user_2 = User.create!(email: 'user_2@gmail.com', password: '123456')
 user_3 = User.create!(email: 'user_3@gmail.com', password: '123456')
 
+user_4_audrey_lemoine = User.new(email: "user4@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
+user_4_audrey_lemoine.save!
+file = URI.open("https://res.cloudinary.com/dgck8cniu/image/upload/v1624109574/DSC03556_2_fm0opl.jpg")
+user_4_audrey_lemoine.photo.attach(io: file, filename: "#{user_4_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
+
+
+current_user.each do |photo|
+    file = URI.open(photo[index])
+    user = User.create!(photo)
+    user.photos.attach(io: file, filename: "#{user.email}.jpg", content_type: 'image/jpg')
+  end
+
 
   offices = [{ address: '14 rue Crespin du Gast', title: 'Le Wagon', price: 25, description: 'Located near ESCP, quiet street with natural light.', user: user_1, capacity: 60},{ address: '16 villa Gaudelet, 75011 Paris', title: 'Le Perchoir', price: 25, description: 'High ceiling, bright, vibrant office space', user: user_1, capacity: 90},{ address: '64-66 rue des archives, 75003 Paris', title: 'Wework marais', price: 40, description: 'workstations in openspace', user: user_2, capacity: 150},{ address: '5 tour saint jacques, 75005 Paris', title: 'OpenSpace', price: 35, description: 'Workstations in openspace', user: user_2, capacity: 60},{ address: 'Rue du Cloître Saint-Merri, 75004 Paris', title: 'FlexWork', price: 19, description: 'workstations in openspace', user: user_2, capacity: 20}]
 

@@ -17,11 +17,14 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%=  f.input :photos, as: :file, input_html: { multiple: true } %>
+
 
   </div>
-   <%# <div class="upload_photo my-3">
+    <div class="upload_photo my-3">
         <%= f.label "Profile photo" %>
+        <%= f.file_field :photo %><br>
+      </div>
+
 
 
   <div class="form-actions">
