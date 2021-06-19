@@ -9,9 +9,9 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 392px;
-  border-radius: 5px;
-
+  height: 336px;
+  border-radius: 15px;
+  margin-top: 15px;
   &:hover{
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
   }
@@ -92,17 +92,16 @@
   padding: 16px;
 }
 
-.icon-dashboard{
+.icon-dashboard {
 font-size: 40px;
 color: white;
 margin-left: 40px;
 margin-right: 40px;
 }
 
-.h1-dashboard{
-margin-top: 40px;
-margin-bottom:40px;
-margin-left: 30px;
+.h1-dashboard {
+margin-top: 34px;
+margin-bottom: 27px;
 font-size: 18px;
 justify-content: center;
 }
@@ -122,6 +121,7 @@ color: black;
 
 .nav-tabs {
 background-color: #2645EC;
+height: 100px;
 }
 
 .nav-link {
@@ -143,4 +143,8 @@ font-size: 20px;
 
 img.trash_celia {
   margin-top: 20px;
+}
+
+.trash-price {
+  justify-content: space-between;
 }
