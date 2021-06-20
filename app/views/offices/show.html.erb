@@ -1,7 +1,7 @@
  <div class="container my-5">
   <%# <div class="row"> %>
     <%# <div class="card-show-office1"> %>
-    <h1 class="title-office">Welcome to <%= @office.title %></h1>
+    <h1 class="title-office mb-5">Welcome to <%= @office.title %></h1>
 
   <% if @office.photos.attached? %>
             <%=cl_image_tag @office.photos.first.key, crop: :fill , class: 'image'%>
