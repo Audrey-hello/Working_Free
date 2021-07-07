@@ -5,18 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Booking.destroy_all
 Office.destroy_all
 User.destroy_all
 
 user_1 = User.create(email: 'user_1@gmail.com', password: '123456')
+unless User.find_by(email: 'admin@example.com')
 user_2 = User.create!(email: 'user_2@gmail.com', password: '123456')
 user_3 = User.create!(email: 'user_3@gmail.com', password: '123456')
 
-user_4_audrey_lemoine = User.new(email: "user4@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
-user_4_audrey_lemoine.save!
-file = URI.open("https://res.cloudinary.com/dgck8cniu/image/upload/v1624109574/DSC03556_2_fm0opl.jpg")
-user_4_audrey_lemoine.photo.attach(io: file, filename: "#{user_4_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
+# user_4_audrey_lemoine = User.new(email: "user4@gmail.com", password: "123456", first_name: "Audrey", last_name:"Le Moine")
+# user_4_audrey_lemoine.save!
+# file = URI.open("https://res.cloudinary.com/dgck8cniu/image/upload/v1624109574/DSC03556_2_fm0opl.jpg")
+# user_4_audrey_lemoine.photo.attach(io: file, filename: "#{user_4_audrey_lemoine.email}.jpg", content_type: 'image/jpg')
 
 
 current_user.each do |photo|
