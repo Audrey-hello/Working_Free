@@ -27,9 +27,12 @@ require("channels")
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
-import { initFlatpickr } from "../plugins/flatpickr";
 
-initFlatpickr();
+
+import { loadDynamicText } from '../components/defile';
+document.addEventListener('turbolinks:load', () => {
+  loadDynamicText();
+})
 
 
 import { initMapbox } from '../plugins/init_mapbox';
@@ -37,3 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 
+import { initFlatpickr } from "../plugins/flatpickr";
+document.addEventListener('turbolinks:load', () => {
+initFlatpickr();
+})

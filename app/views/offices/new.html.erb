@@ -1,22 +1,21 @@
-<div class="container py-5">
+<div class="container py-4">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3 class="text-center mb-5 mt-3">Create your office</h3>
+      <div class="bg-white rounded p-3">
+        <h3 class="text-center mb-4 mt-2"> Rent your space </h3>
+        <div class="form-css">
         <%= simple_form_for @office do |f| %>
-          <%= f.input :title %>
-          <%= f.input :price %>
-          <%= f.input :address %>
-          <%= f.input :description %>
-          <%= f.input :capacity%>
-          <%= f.input :photo, as: :file %>
+            <%= f.input :title, label: "Create a title for your listing" %>
+            <%= f.input :price, label: "What is the daily price you want to rent?" %>
+            <%= f.input :address, label: "Where is your office located?" %>
+            <%= f.input :description, label: "Describe the area"%>
+            <%= f.input :capacity, label: "How many workstations are available?"%>
+            <%= f.input :photo, as: :file, label: "Upload your photos" %>
 
-
-          <%= f.submit class: 'btn-blue-new-office mb-5' %>
-        <%= link_to 'Back', offices_path %>
-
+            <%= f.submit class: 'btn-blue-new-office mb-5',  value: "Submit"%>
+          <%= link_to 'Back', offices_path %>
         <% end %>
-
+        </div>
       </div>
     </div>
   </div>

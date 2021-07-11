@@ -2,8 +2,8 @@
   </div>
     <% if @offices.empty? %>
     <div class="index-noresult">
-      <p class="index-offices-empty-message">No result 😢</p>
-        <%= link_to "try again?", root_path, class: "btn btn-primary go-back" %>
+      <p class="index-offices-empty-message"> No result 😢 </p>
+        <%= link_to "Try again?", root_path, class: "btn btn-primary go-back" %>
     </div>
     <% else %>
     <div>
@@ -15,23 +15,25 @@
                 <% @offices.each do |office| %>
                   <%= link_to office_path(office) do %>
 
-                    <div class="card-office">
-                      <% if office.photos.attached? %>
-                        <%= cl_image_tag office.photos.first.key, :cloud_name => 'drojktwel', height: 300, width: 400, crop: :fill %>
-                      <% else %>
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"/>
-                      <%end%>
+                  <div class="card-office">
+                    <% if office.photos.attached? %>
+                      <%= cl_image_tag office.photos.first.key, :name => 'drojktwel', crop: :fill, class: "image-offices"%>
 
-                      <div class="card-office-infos">
-                        <div>
-                          <h2><%= office.title %></h2>
-                          <p><%= office.address %></p>
-                          <p><%= office.description %></p>
-                          <p><%= office.capacity%></p>
-                        </div>
-                          <h2 class="card-office-pricing"> <%= office.price %>€</h2>
+                    <% else %>
+                      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="image-offices">
+                    <%end%>
+
+                    <div class="card-office-infos">
+                      <div class="card-text">
+                        <h2><%= office.title %></h2>
+                        <p><%= office.address %></p>
+                        <p>Capacity: <%= office.capacity%></p><br>
+                        <img src="/assets/meditation.svg" class="icon-show"/> <img src="/assets/cutlery.svg" class="icon-show"/>
                       </div>
+
+                        <h3 class="office-prices"> <%= office.price %>€</h3>
                     </div>
+                  </div>
                   <% end %>
                 <% end %>
               </div>

@@ -1,9 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dv6ax1ttq/image/upload/e_contrast:0/v1621267552/bg_img_home_emdfsj.jpg);">
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)), url(https://res.cloudinary.com/dgck8cniu/image/upload/v1624009975/cowomen-ZKHksse8tUU-unsplash_hf7bvw.jpg);">
 
   <div class="container d-flex justify-content-between">
-    <div class="pr-3">
-      <h1>Looking for a place to work? Try Apolo!</h1>
-      <p class="mt-4">Mobile workers, find your workstation of the day</p>
+    <div class="pr-10">
+      <h1 class="text-home" id="text-defile"></h1>
     </div>
 
     <div class="col-12 col-sm-4 search-bar">
@@ -12,17 +11,14 @@
         <%= form_tag offices_path, method: :get do %>
         <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
-            placeholder: "what place would you like?"
-        %>
-        <%= text_field_tag :capacity,
-            params[:capacity],
-            class: "form-control",
-            placeholder: "how many are you?"
-        %>
-        <%= submit_tag "Book a spot", class: "btn btn-primary" %>
+            class: "form-control-home",
+            placeholder: "  Let's find a place!"%>
+
+        <%= submit_tag "Start", class: "btn-blue-home" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+

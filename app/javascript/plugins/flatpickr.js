@@ -10,8 +10,8 @@ const initFlatpickr = () => {
       altInputClass: "invisible"
 
   });
-}
 
+}
 
 export { initFlatpickr };
 

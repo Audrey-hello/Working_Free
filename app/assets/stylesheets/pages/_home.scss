@@ -4,11 +4,11 @@
   height: calc(100vh - 96.75px);
   display: flex;
   align-items: center;
+  height: 100vh;
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
+  margin-top: 7px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
@@ -16,23 +16,63 @@
 
 .banner p {
   font-size: 36px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.search-bar{
+.search-bar {
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(177, 174, 174, 0.7);
   margin-left: 80px;
 }
 
-.form-control{
+.form-control {
   display: flexbox;
-  margin-block: 22px;
-  height: 49px;
+  height: 35px;
   border-radius: 6px;
-  padding: 20px;
+  padding: 8px;
   opacity: 1;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.container-login {
+  margin-left: 452px;
+}
+
+.icon-show {
+  height: 20px;
+}
+
+.image-offices {
+  vertical-align: middle;
+  border-style: none;
+  width: 240px;
+}
+
+.form-control-home {
+  width: 300px;
+  border-radius: 5px;
+  height: 40px;
+  border-style:none;
+}
+
+mark, .mark {
+  padding: 0.2em;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.text-home {
+  color: white;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.text-left {
+  margin-bottom: 55px;
+  color:white;
+}
+
+.form-css {
+  font-size: 14px;
 }

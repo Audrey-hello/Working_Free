@@ -15,7 +15,6 @@
 .card-show {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
@@ -25,18 +24,16 @@
 }
 
 .card-show-office {
-
   overflow: hidden;
   height: 470px;
   width: 419px;
-  background: whitesmoke;
+  background: #eff3f7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   padding: 10px;
-  margin-right: 110px;
   margin-top: 43px;
 }
 
@@ -63,33 +60,21 @@
   font-size: 10px;
 }
 
-.card-dashboard {
-  height: 375px;
-
-  color:black;
-
-  align-items: center;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
 
 .flex-box-office-show {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  margin-top: 150px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 
 .image {
-  margin-top: 5px;
-  width: 603px;
-  height: 349px;
-  margin-left: 250px;
-  border: mediumblue;
+  width: 100%;
+  height: 512px;
   border-radius: 10px;
-object-fit: cover;
+  object-fit: cover;
+
 }
 
 .index-noresult {
